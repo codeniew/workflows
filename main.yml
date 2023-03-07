@@ -2,7 +2,7 @@ name: GLaDOS Auto Checkin
 
 on:
   schedule:
-    - cron: '0 5 14 * *' # 每天 0 点运行
+    - cron: '15 6 * * *' # 每天 0 点运行
 
 jobs:
   checkin:
