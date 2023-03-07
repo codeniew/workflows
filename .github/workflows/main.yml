@@ -2,7 +2,7 @@ name: GLaDOS Auto Checkin
 
 on:
   schedule:
-    - cron: '25 6 * * *' # 每天 0 点运行
+    - cron: '35 6 * * *' # 每天 0 点运行
 
 jobs:
   checkin:
@@ -18,11 +18,9 @@ jobs:
         run: |
           python -m pip install --upgrade pip # 更新 pip
           pip install requests # 安装 requests 库
-      - name: COKIE
-        env:
-          COKIE: ${{ secrets.COOKIE }} # 传递 cookie
-      - name: token
-        env:
-          TOKEN: ${{ secrets.TOKEN }} # 传递 cookie
       - name: Run script
         run: python auto_card.py # 运行脚本
+        env:
+          TOKEN: ${{ secrets.TOKEN }} # 传递 cookie
+          COKIE: ${{ secrets.COOKIE }} # 传递 cookie
+
