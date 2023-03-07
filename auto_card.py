@@ -12,6 +12,7 @@ def auto_card():
         "Cookie": os.getenv('COOKIE')
     }
     print("ss")
+    print(os.getenv('COOKIE'))
     response = requests.post(url, data=form_data, headers=headers)
     response_data = response.json()
     print(response_data)
