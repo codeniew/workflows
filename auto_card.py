@@ -8,7 +8,8 @@ def auto_card():
     cookie = os.getenv('COOKIE')
     print(cookie)
     form_data = {"token": "glados.network"}
-    url = "https://glados.one/api/user/checkin"
+    # url = "https://glados.one/api/user/checkin"
+    url = 'https://glados.network/api/user/checkin'
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36",
         "Cookie": cookie
