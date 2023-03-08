@@ -6,8 +6,6 @@ from dingding import get_data, gaojing
 
 def auto_card():
     cookie = os.getenv('COOKIE')
-    # user_agent = os.getenv('USER_AGENT')
-    # cookie = 'koa:sess=eyJ1c2VySWQiOjE2NjQzNywiX2V4cGlyZSI6MTcwNDE3ODQyMjgzOCwiX21heEFnZSI6MjU5MjAwMDAwMDB9; koa:sess.sig=0JSqbRNpBbQK7-Q68Zdooru92wc'
     user_agent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.42'
     form_data = {"token": "glados.network"}
     url = "https://glados.one/api/user/checkin"
