@@ -19,6 +19,6 @@ jobs:
           pip install requests # 安装 requests 库
       - name: Run script
         env:
-          TOKEN: ${{ secrets.TOKEN }} # 传递 token
-          COKIE: ${{ secrets.COOKIE }} # 传递 cookie
+          TOKEN: ${{ secrets.DING_TOKEN }} # 传递 token
+          COKIE: ${{ secrets.GLADOS_COOKIE }} # 传递 cookie
         run: python auto_card.py # 运行脚本
