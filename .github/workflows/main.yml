@@ -19,8 +19,8 @@ jobs:
           python -m pip install --upgrade pip # 更新 pip
           pip install requests # 安装 requests 库
       - name: Run script
-        run: python auto_card.py # 运行脚本
         env:
           TOKEN: ${{ secrets.TOKEN }} # 传递 token
           COKIE: ${{ secrets.COOKIE }} # 传递 cookie
+        run: python auto_card.py # 运行脚本
 
