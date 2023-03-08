@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest # 运行环境
     env:
         TOKEN: ${{ secrets.DING_TOKEN }} # 传递 token
-        COKIE: ${{ secrets.GLADOS_COOKIE }} # 传递 cookie
+        COOKIE: ${{ secrets.GLADOS_COOKIE }} # 传递 cookie
         USER_AGENT : ${{ secrets.USER_AGENT }} # 传递 USER_AGENT
     steps:
       - name: Checkout
