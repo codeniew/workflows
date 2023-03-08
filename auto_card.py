@@ -5,6 +5,7 @@ from dingding import get_data, gaojing
 
 
 def auto_card():
+    print(os.getenv('COOKIE'))
     form_data = {"token": "glados.network"}
     url = "https://glados.one/api/user/checkin"
     headers = {
@@ -12,7 +13,6 @@ def auto_card():
         "Cookie": os.getenv('COOKIE')
     }
     print("ss")
-    print(os.environ('COOKIE'))
     print("cookie已经打印")
     response = requests.post(url, data=form_data, headers=headers)
     response_data = response.json()

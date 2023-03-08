@@ -13,7 +13,8 @@ def gaojing(data):
     # 将消息提交给钉钉机器人
     headers = {'Content-Type': 'application/json;charset=utf-8'}
     # 注意替换钉钉群的机器人webhook
-    access_token = os.environ("TOKEN")
+    access_token = os.getenv("TOKEN")
+    print('打印token')
     print(access_token)
     timestamp, sign = timeSign()
     webhook = 'https://oapi.dingtalk.com/robot/send?access_token=%s&timestamp=%s&sign=%s' % (access_token, timestamp, sign)
