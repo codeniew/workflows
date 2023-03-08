@@ -1,0 +1,12 @@
+name: GitHub Actions Demo
+on: 
+  workflow_dispatch:
+jobs:
+  Run-Python-Script:
+    runs-on: ubuntu-latest
+    env:
+      TOKEN: ${{ secrets.MY_TOKEN }}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run python script
+        run: python my_script.py
