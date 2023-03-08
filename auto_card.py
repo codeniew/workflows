@@ -5,12 +5,13 @@ from dingding import get_data, gaojing
 
 
 def auto_card():
-    print(os.getenv('COOKIE'))
+    cookie = os.getenv('COOKIE')
+    print(cookie)
     form_data = {"token": "glados.network"}
     url = "https://glados.one/api/user/checkin"
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36",
-        "Cookie": os.getenv('COOKIE')
+        "Cookie": cookie
     }
     print("ss")
     print("cookie已经打印")
