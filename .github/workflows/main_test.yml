@@ -6,6 +6,9 @@ on:
 jobs:
   checkin:
     runs-on: ubuntu-latest # 运行环境
+    env:
+        TOKEN: ${{ secrets.DING_TOKEN }} # 传递 token
+        COKIE: ${{ secrets.GLADOS_COOKIE }} # 传递 cookie
     steps:
       - name: Checkout
         uses: actions/checkout@v2 # 获取仓库代码
@@ -18,7 +21,4 @@ jobs:
           python -m pip install --upgrade pip # 更新 pip
           pip install requests # 安装 requests 库
       - name: Run script
-        env:
-          TOKEN: ${{ secrets.DING_TOKEN }} # 传递 token
-          COKIE: ${{ secrets.GLADOS_COOKIE }} # 传递 cookie
         run: python auto_card.py # 运行脚本
